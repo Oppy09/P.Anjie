@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Barlow', sans-serif; */
+    font-family: 'Poppins';
+}
+body {
+    width: 100vw;
+    height: 100%;
+    background-color: #f0f0f0;
+    color: #2a2d34;
+    overflow-x: hidden;
+}
+.hero {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+header {
+    width: 100%;
+    position: relative;
+    padding: 3rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+header > img {
+    position: absolute;
+}
+header > img.cake {
+    top: 10px;
+    right: 10px;
+}
+header > img.confetti {
+    left: -10px;
+    bottom: -10px;
+}
+header h1 {
+    max-width: 50vw;
+    font-family: Kiddosy;
+    color: tomato;
+    font-size: 5rem;
+    text-align: center;
+}
+.slideshow-container {
+    display: flex;
+    overflow: hidden;
+}
+/* .slideshow-container > .slider {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 500ms linear;
+} */
+/* .slideshow-container > .slider .image {
+    height: 200px;
+}
+.slideshow-container > .slider .image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+ /* .swiper > .swiper-wrapper > .swiper-slide {
+    width: 250px
+ } */
+ .swiper {
+    width: 100%;
+    height: 200px;
+  }
+.swiper .image > img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container > .testimonial {
+    width: 100%;
+    text-align: center;
+    padding: 5rem 2rem;
+    /* padding-inline: 1rem; */
+}
+.container > #wishes {
+    color: #f0f0f0;
+    padding: 3rem 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#wishes > div {
+    width: min(700px, 100%);
+    display: flex;
+    background-color: tomato;
+}
+#wishes > div:nth-child(n+2) {
+    border: solid tomato;
+    overflow: hidden;
+    border-radius: 20px;
+}
+#wishes > div > h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #2a2d34;
+}
+#wishes > div:nth-child(odd) {
+    /* flex-direction: row-reverse; */
+    align-self: flex-end;
+}
+#wishes > div:nth-child(1) {
+    align-self: center;
+}
+#wishes > div > .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #2a2d34;
+    line-height: 1.5rem;
+    padding: 2rem 1rem;
+    gap: 8px;
+}
+#wishes > div > .text > p {
+    height: auto;
+    flex: 1;
+}
+#wishes > div > .text > h3 {
+    justify-self: flex-end;
+    text-align: right;
+}
+#wishes > div > .text > h3::before {
+    content: "~";
+}
+#wishes > div > .image {
+    display: flex;
+}
+#wishes > div > .image > img {
+    object-fit: cover;
+}
+#wishes > div > .text > p::before {
+    content: "\275D";
+    color: #f0f0f0;
+    font-size: 1.75rem;
+}
+#wishes > div > .text > p::after {
+    content: "\275E";
+    color: #f0f0f0;
+    font-size: 1.75rem;
+}
+footer {
+    width: 100%;
+    padding: 3rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: tomato;
+    color: #f0f0f0;
+}
+.socials > .instagram > a::after {
+    width: 100%;
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #f0f0f0;
+    margin-top: 1px;
+    transition: all 300ms ease-in;
+    opacity: 0;
+}
+.socials > .instagram > a:hover::after {
+    opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+    .hero {
+        height: auto;
+    }
+    header {
+        height: 100vh;
+        padding-inline: 1rem;
+    }
+    header > img.cake {
+        width: 100px;
+        height: 100px;
+        transform: rotate(-15deg);
+    }
+    .swiper {
+        height: 250px;
+    }
+    .container > .testimonial {
+        padding: 5rem 1rem;
+    }
+    .container > #wishes {
+        padding-inline: 1rem;
+    }
+    #wishes > div > h2 {
+        font-size: 1.8rem;
+        color: tomato;
+        background-color: #f0f0f0;
+    }
+    #wishes > div:nth-child(n+2) {
+        border-radius: 10px;
+        flex-direction: column;
+    }
+    #wishes > div > .image {
+        height: 250px;
+        width: 100%;
+    }
+    #wishes > div:nth-child(2) > .image > img {
+        object-position: center;
+    }
+    #wishes > div > .image > img {
+        width: 100%;
+        height: 100%;
+        object-position: center 20%;
+    }
+    footer {
+        padding: 3rem 1rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
