@@ -184,8 +184,12 @@ footer {
         height: auto;
     }
     header {
+        flex-basis: auto;
         height: 100vh;
         padding-inline: 1rem;
+    }
+    header h1 {
+        max-width: none;
     }
     header > img.cake {
         width: 100px;
