@@ -185,7 +185,7 @@ footer {
     }
     header {
         flex-basis: auto;
-        height: 100vh;
+        height: 100lvh;
         padding-inline: 1rem;
     }
     header h1 {
@@ -197,7 +197,10 @@ footer {
         transform: rotate(-15deg);
     }
     .swiper {
-        height: 250px;
+        height: 400px;
+    }
+    .swiper .image > img {
+        object-position: center 20%;
     }
     .container > .testimonial {
         padding: 5rem 1rem;
