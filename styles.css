@@ -101,6 +101,17 @@ header h1 {
     display: flex;
     background-color: tomato;
 }
+#wishes > .osho {
+    width: min(800px, 100%);
+}
+.osho > .image {
+    /* display: flex;
+    width: 100%; */
+}
+.osho > .image > img {
+    /* object-fit: cover;
+    aspect-ratio: 8/1; */
+}
 #wishes > div:nth-child(n+2) {
     border: solid tomato;
     overflow: hidden;
@@ -228,6 +239,13 @@ footer {
         width: 100%;
         height: 100%;
         object-position: center 20%;
+    }
+    #wishes > .osho > .image {
+        height: 300px;
+    }
+    .osho > .image > img {
+        /* object-fit: cover;
+        object-position: center; */
     }
     footer {
         padding: 3rem 1rem;
